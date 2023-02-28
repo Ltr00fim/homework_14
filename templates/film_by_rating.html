@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MOVIES_NETFLIX</title>
+        <link rel="shortcut icon" href="/static/images/icon.svg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <p><a href="/"><img src="/static/images/arrow.png" width="40" height="40"></a></p>
+        <h1 class="center" style="color:#5100ad">Фильмы для {{ text }}</h1>
+        <h4 class="center"></h4>
+        <p class="center_padding">{{ text1 }}</p>
+        <table>
+            <tr><th>Название</th><th>Рейтинг</th><th>Год выхода</th><th>Описание</th></tr>
+            {% for movie_ in movie %}
+                <tr><td>{{ movie_[0] }}</td><td>{{ movie_[1] }}</td><td>{{ movie_[2] }}</td><td>{{ movie_[3] }}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

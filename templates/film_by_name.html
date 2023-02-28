@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MOVIES_NETFLIX</title>
+        <link rel="shortcut icon" href="/static/images/icon.svg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <p><a href="/"><img src="/static/images/arrow.png" width="40" height="40"></a></p>
+        <h1 class="center" style="color:#5100ad">{{ text }}</h1>
+        {% if movie != '' %}
+            <h4 class="center"></h4>
+            <p class="center_padding">{{ text1 }}</p>
+            <hr>
+            <p><img src="/static/images/clapperboard-solid.png" alt="movie" width="132" height="174" class="left_img">
+                NAME: {{ movie[0] }}<br>
+                RELEASE YEAR: {{ movie[2] }}<br>
+                COUNTRY: {{ movie[1] }}<br>
+                GENRES: {{ movie [3] }}<br>
+                DESCRIPTION: {{ movie[4] }}
+            </p>
+            {% if movies != '' %}
+                <h2 style="color: #5100ad">Остальные фильмы по запросу "{{ request_title }}":</h2>
+                <table>
+                    <tr><th>Название</th><th>Страна</th><th>Год выхода</th><th>Жанр</th><th>Описание</th></tr>
+                    {% for movie_ in movies %}
+                        <tr><td>{{ movie_[0] }}</td><td>{{ movie_[1] }}</td><td>{{ movie_[2] }}</td><td>{{ movie_[3] }}</td><td>{{ movie_[4] }}</td></tr>
+                    {% endfor %}
+                 </table>
+            {% endif %}
+        {% else %}
+            <p><img src="/static/images/sad.jpg" alt="movie" width="500" height="500" class="sad"></p>
+            <p style="color: #909dc7; text-align: center">Мы тоже очень грустим</p>
+        {% endif %}
+    </body>
+</html>

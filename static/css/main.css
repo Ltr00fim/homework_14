@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type=text] {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.rounded-input {
+  padding:10px;
+  border-radius:10px;
+}
+
+.center_padding {
+  padding:15px;
+  border-radius:10px;
+  text-align: center;
+  color: #909dc7;
+}
+
+input {
+  width: 20%;
+}
+
+.center {
+  text-align: center;
+}
+
+table {
+  width: 100%; /* Ширина таблицы */
+  background: #ffffff; /* Цвет фона таблицы */
+  color: white; /* Цвет текста */
+  border-spacing: 3px; /* Расстояние между ячейками */
+}
+td, th {
+  background: #643ab9; /* Цвет фона ячеек */
+  padding: 5px; /* Поля вокруг текста */
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: #643ab9; /* Цвет линии */
+    color: #643ab9; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+}
+
+.left_img {
+    float: left;
+    margin: 0 20px 10px 10px;
+    padding: 10px;
+}
+
+.sad {
+    margin: 10px 100px 0 450px;
+}
+
+.btn {
+    display: inline-block;
+    background: #87849d;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    left: 37%;
+}
+
+input[type=checkbox] {
+    width: 30px;
+}
+
+fieldset {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.column {
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+    column-width: 200px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-column-rule: 1px solid #ccc;
+    -moz-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
+}
